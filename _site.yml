@@ -1,0 +1,14 @@
+name: "Yay internet!"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "Resume"
+      href: myresume.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<qx2222@columbia.edu>
+    - icon: fa-github fa-lg
+      href: https://github.com/qiaoyixu
+output:
+  html_document:
+    theme: flatly

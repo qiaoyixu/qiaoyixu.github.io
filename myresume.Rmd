@@ -12,14 +12,20 @@ output:
 
 <img src="images/mypicture.jpeg" style = "width:40%">
 
-917 403-6966 | qx2222@columbia.edu | New York, NY
+*Phone number*: 917 403-6966 
+
+*Email*: qx2222@columbia.edu 
+
+*Address*: New York, NY
+
+<br>
 
 ## EDUCATION
 
 <p style="text-align:left;">
     **Columbia University, New York, NY**
     <span style="float:right;">
-    September 2021-Expected May 2023
+    Sep. 2021-Expected May 2023
     </span>
 </p>
 
@@ -33,7 +39,7 @@ output:
 <p style="text-align:left;">
     **University of Massachusetts Amherst, Amherst, MA**
     <span style="float:right;">
-    September 2018-May 2021
+    Sep. 2018-May 2021
     </span>
 </p>
 
@@ -44,5 +50,93 @@ output:
     </span>
 </p>
 
+<br>
+
 ## INTERNSHIP EXPERIENCE
+
+
+<p style="text-align:left;">
+    **Pfizer Inc, New York, NY**
+    <span style="float:right;">
+    June-Aug. 2022
+    </span>
+</p>
+
+<p style="text-align:left;">
+    *_-Epidemiology Research Assistant, Medical Development and Scientific/Clinical Affairs_*
+    </span>
+</p>
+
+* Provided critical epidemiology supports in the development of the Lyme disease vaccination
+* Conducted an individual project of Systematic Literature Review in Canada tick surveillance
+* Analyzed database used by SAS and presented results
+* Next Step: Publish an essay (expected Oct.-Nov. 2022) and serve as second author
+
+
+<p style="text-align:left;">
+    **Frost and Sullivan, Shanghai, China**
+    <span style="float:right;">
+    Dec. 2021-Feb. 2022
+    </span>
+</p>
+
+<p style="text-align:left;">
+    *_-Consulting Analyst Intern_*
+    </span>
+</p>
+
+* Assisted in data collection for programs
+* Made slides and presentation to support market analysis of company
+* Participate in expert interviews and write interview minutes
+
+
+<p style="text-align:left;">
+    **National Center for Medical Service Administration, Beijing, China**
+    <span style="float:right;">
+    July-Sept. 2020
+    </span>
+</p>
+
+<p style="text-align:left;">
+    *_-Data Analyst Intern_*
+    </span>
+</p>
+
+* Collected Nucleic Acid Test data from 20 hospitals/health centers everyday
+* Organized daily work dynamics and analyzed Nucleic Acid Test data
+* Write daily reports about COVID-19 according to the results of analyzing data
+
+
+<p style="text-align:left;">
+    **Chinese Center for Disease Control and Prevention, Beijing, China**
+    <span style="float:right;">
+    June-Aug. 2019
+    </span>
+</p>
+
+<p style="text-align:left;">
+    *_-Data Analyst Intern, office for major projects_*
+    </span>
+</p>
+
+* Collected data from many different provinces about air quality and water quality
+* Analyzed prior air quality data and discussed with supervisor
+* Learned how to write report according to the results of analyzing data
+
+<p style="text-align:left;">
+    *_-Intern, shielded room_*
+    </span>
+</p>
+
+* Disseminate public health awareness across primary and middle school children and created poster competition for children ages 6-15, related with how to protect environment.
+* Prepared meeting that we invited many professors to have lecture about environmental health knowledge for children and parents.
+
+<br>
+
+## SKILLS
+Languages: Fluent in Mandarin Chinese and English
+
+
+Technical: SAS(Advanced), R (Advanced), MySQL(advanced), Excel (Advanced)
+
 

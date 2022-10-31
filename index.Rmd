@@ -4,7 +4,6 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
 ---
 
 # Hi, here is Joyce's website
@@ -32,7 +31,12 @@ output:
 
 ## Academic and professional experience 
 
-I am current MPH student at [Columbia University Irving Medical Center](https://www.cuimc.columbia.edu/). I am studying epidemiology major and certified in Applied Biostatistics and Data Science at [Mailman School of Public Health](https://www.publichealth.columbia.edu/academics). I studied public health science for almost 5 years during my undergraduate and graduate schools, because my goal is, to utilized what I learned, to make some efforts on healthcare field and helping people become healthier. I have several related internship experiences at [Pfizer](https://www.pfizer.com/), [Frost and Sullivan](https://www.frost.com/), National Center for Medical Service Administration and [Chinese Center for Disease Control and Prevention](https://www.chinacdc.cn/en/). If you would like to know more details about my academic and professional detials, please visit [myresume]
+I am current MPH student at [Columbia University Irving Medical Center](https://www.cuimc.columbia.edu/). I am studying epidemiology major and certified in Applied Biostatistics and Data Science at [Mailman School of Public Health](https://www.publichealth.columbia.edu/academics). I studied public health science for almost 5 years during my undergraduate and graduate schools, because my goal is, to utilized what I learned, to make some efforts on healthcare field and helping people become healthier. I have several related internship experiences at [Pfizer](https://www.pfizer.com/), [Frost and Sullivan](https://www.frost.com/), National Center for Medical Service Administration and [Chinese Center for Disease Control and Prevention](https://www.chinacdc.cn/en/). If you would like to know more details about my academic and professional experience, please visit [my resume](myresume.html).
+
+
+## Plots of MY NOAA dataset
+
+**Create a flexdashboard using plotly for that includes at least three distinct plot types (e.g. scatterplots, line plots, bar plots, box plots, etc.). Use 'MY NOAA' dataset:**
 
 
 
