@@ -1,0 +1,48 @@
+---
+title: "This is Joyce's resume"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# Qiaoyi(Joyce) Xu 
+
+## BASIC INFORMATION 
+
+<img src="images/mypicture.jpeg" style = "width:40%">
+
+917 403-6966 | qx2222@columbia.edu | New York, NY
+
+## EDUCATION
+
+<p style="text-align:left;">
+    **Columbia University, New York, NY**
+    <span style="float:right;">
+    September 2021-Expected May 2023
+    </span>
+</p>
+
+<p style="text-align:left;">
+    *_Master of Public Health in Epidemiolog, Certificate in Applied Biostatistics_*
+    <span style="float:right;">
+    GPA:3.93
+    </span>
+</p>
+
+<p style="text-align:left;">
+    **University of Massachusetts Amherst, Amherst, MA**
+    <span style="float:right;">
+    September 2018-May 2021
+    </span>
+</p>
+
+<p style="text-align:left;">
+    *_Bachelor of Science in Public Health Sciences and Mathematics, Double Major_*
+    <span style="float:right;">
+    GPA:3.8
+    </span>
+</p>
+
+## INTERNSHIP EXPERIENCE
+
