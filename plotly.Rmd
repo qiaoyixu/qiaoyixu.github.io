@@ -1,0 +1,65 @@
+---
+title: "Plotly"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# Plots of NY NOAA dataset
+
+## Load packages and ny_noaa data
+
+```{r}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+library(dplyr)
+```
+
+## Choose subset of data
+
+```{r}
+data("ny_noaa")
+
+set.seed(10032)
+part_ny_noaa = ny_noaa %>%
+  separate(date, into = c("year","month","day"), sep = "-") %>%
+  mutate(year = as.numeric(year),
+         month = as.numeric(month),
+         day = as.numeric(day),
+         tmax = as.numeric(tmax)/10,
+         tmin = as.numeric(tmin)/10,
+         prcp = as.numeric(prcp)/10) %>%
+  drop_na(tmax, tmin, prcp) %>%
+  filter(year %in% 2005:2010) %>%
+  sample_n(10000) 
+
+part_ny_noaa
+
+```
+
+
+In 'ny_noaa' data, there are `r nrow(ny_noaa)` observations, which is a really huge data. So, we would like to choose part of observations that we are interested to form 'part_ny_noaa' data. In 'part_ny_noaa' data, we focus on data between 2005 and 2010, and cleared missing data of tmax, tmin, and prcp. However, there are also so many observations, so that we set a random seed to help us random smapled 10000 observations in our 'part_ny_noaa'.
+
+
+## Plotly box plot
+
+```{r}
+box_plot = part_ny_noaa %>%
+  mutate(month = factor(month.name[month], levels = month.name)) %>%
+  plot_ly(x = ~month, y = ~tmax, color = ~month, type = "box") %>%
+  layout(title = "Boxplot of Maximun Temperature Distribution in each month", 
+         legend = list(title = list(text = "<month>"))) #add title and lengend title in the graph
+
+box_plot
+
+```
+
+
+## Plotly scatter plot
+
+
+
+
+
