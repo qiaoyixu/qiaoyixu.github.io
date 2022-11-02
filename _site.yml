@@ -7,6 +7,8 @@ navbar:
       href: myresume.html
     - text: "Plotly"
       href: plotly.html
+    - text: "Dashboard"
+      href: dashboard.html
     - icon: fa-envelope fa-lg
       href: mailto:<qx2222@columbia.edu>
     - icon: fa-github fa-lg

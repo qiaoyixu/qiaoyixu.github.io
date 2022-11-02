@@ -36,7 +36,7 @@ I am current MPH student at [Columbia University Irving Medical Center](https://
 
 ## Plots of NY NOAA dataset
 
-I used [NY NOAA dataset](https://p8105.com/dataset_noaa.html). Then, created a flexdashboard using plotly for that includes  three distinct plot types (line plot, bar plot, and box plot).  You could find my results and plots in [here](plotly.html).
+I used [NY NOAA dataset](https://p8105.com/dataset_noaa.html). Then, created a flexdashboard using plotly for that includes  three distinct plot types (scatter plot, bar plot, and box plot).  You could find my results and plots in [here](plotly.html).
 
 
 

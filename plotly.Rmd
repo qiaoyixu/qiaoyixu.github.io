@@ -14,8 +14,6 @@ output:
 library(tidyverse)
 library(p8105.datasets)
 library(plotly)
-library(dplyr)
-library(ggplot2)
 ```
 
 ## Choose subset of data
@@ -49,7 +47,7 @@ In 'ny_noaa' data, there are `r nrow(ny_noaa)` observations, which is a really h
 ```{r}
 box_plot = part_ny_noaa %>%
   mutate(month = factor(month.name[month], levels = month.name)) %>%
-  plot_ly(x = ~month, y = ~tmin, color = ~month, type = "box") %>%
+  plot_ly(x = ~month, y = ~tmin, color = ~month, type = "box", colors = "viridis") %>%
   layout(title = "Boxplot of Minimum Temperature Distribution in each month", 
          legend = list(title = list(text = "<month>"))) #add title and lengend title in the graph
 
@@ -59,18 +57,18 @@ box_plot
 
 This boxplot shows Minimum Temperature Distribution in each month during 2005-2010. It shows the possible minimum temperature range in each month. We could conclude that, in New York, most cold season is from December to February.
 
-## Plotly line plot
+## Plotly Scatter plot
 
 ```{r}
-line_plot = part_ny_noaa %>%
+scatter_plot = part_ny_noaa %>%
   mutate(month = factor(month.name[month], levels = month.name)) %>%
   group_by(month) %>%
   summarise(mean_tmax = mean(tmax, na.rm = T)) %>% 
-  plot_ly(x = ~ month, y = ~mean_tmax, type = "scatter", mode = "line") %>%
-  layout(title = "Mean Maximum Temperature in each month during 2005-2010", 
+  plot_ly(x = ~ month, y = ~mean_tmax, color = ~month, type = "scatter", mode = "line", colors = "viridis") %>%
+  layout(title = "Mean Maximum Temperature by month", 
          yaxis = list(title = "mean of maximum temperature")) #add title in the graph
 
-line_plot
+scatter_plot
 
 ```
 
@@ -83,8 +81,8 @@ bar_plot = part_ny_noaa %>%
   mutate(month = factor(month.name[month], levels = month.name)) %>%
   group_by(month) %>%
   summarise(mean_prcp = mean(prcp, na.rm = T)) %>% 
-  plot_ly(x = ~ month, y = ~mean_prcp, type = "bar") %>%
-  layout(title = "Mean Precipitation (tenths of mm) in each month during 2005-2010", 
+  plot_ly(x = ~ month, y = ~mean_prcp, color = ~month, type = "bar", colors = "viridis") %>%
+  layout(title = "Mean Precipitation (tenths of mm) in each month", 
          yaxis = list(title = "Mean of Precipitation")) #add title in the graph
 
 bar_plot
@@ -93,4 +91,5 @@ bar_plot
 
 This figure shows mean precipitation (tenths of mm) in each month during 2005-2010. We could find compared with January to May, there are more precipitation after June averagely. There are most precipitation in June, July, and October.
 
-
+## Dashboard
+Created a flexdashboard to show the plots, please visit [Dashboard](dashboard.html)
