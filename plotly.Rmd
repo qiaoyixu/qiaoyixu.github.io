@@ -57,27 +57,29 @@ box_plot
 
 ```
 
+This boxplot shows Minimum Temperature Distribution in each month during 2005-2010. It shows the possible minimum temperature range in each month. We could conclude that, in New York, most cold season is from December to February.
 
-## Plotly scatter-line plot
+## Plotly line plot
 
 ```{r}
-scatterline_plot = part_ny_noaa %>%
+line_plot = part_ny_noaa %>%
   mutate(month = factor(month.name[month], levels = month.name)) %>%
   group_by(month) %>%
   summarise(mean_tmax = mean(tmax, na.rm = T)) %>% 
   plot_ly(x = ~ month, y = ~mean_tmax, type = "scatter", mode = "line") %>%
-  layout(title = "Mean Maximun Temperature in each month during 2005-2010", 
+  layout(title = "Mean Maximum Temperature in each month during 2005-2010", 
          yaxis = list(title = "mean of maximum temperature")) #add title in the graph
 
-scatterline_plot
+line_plot
 
 ```
 
+This line plot shows mean maximum temperature in each month during 2005-2010. This result is consistent with the result of minimum temperature.  We could conclude that, in New York, the hottest time of year is during June-August.
 
 ## Plotly bar plot
 
 ```{r}
-part_ny_noaa %>%
+bar_plot = part_ny_noaa %>%
   mutate(month = factor(month.name[month], levels = month.name)) %>%
   group_by(month) %>%
   summarise(mean_prcp = mean(prcp, na.rm = T)) %>% 
@@ -85,7 +87,10 @@ part_ny_noaa %>%
   layout(title = "Mean Precipitation (tenths of mm) in each month during 2005-2010", 
          yaxis = list(title = "Mean of Precipitation")) #add title in the graph
 
+bar_plot
+
 ```
 
+This figure shows mean precipitation (tenths of mm) in each month during 2005-2010. We could find compared with January to May, there are more precipitation after June averagely. There are most precipitation in June, July, and October.
 
 
