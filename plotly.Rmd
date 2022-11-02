@@ -15,6 +15,7 @@ library(tidyverse)
 library(p8105.datasets)
 library(plotly)
 library(dplyr)
+library(ggplot2)
 ```
 
 ## Choose subset of data
@@ -24,7 +25,7 @@ data("ny_noaa")
 
 set.seed(10032)
 part_ny_noaa = ny_noaa %>%
-  separate(date, into = c("year","month","day"), sep = "-") %>%
+  separate(date, into = c("year","month","day"), sep = "-", remove = FALSE) %>%
   mutate(year = as.numeric(year),
          month = as.numeric(month),
          day = as.numeric(day),
@@ -48,8 +49,8 @@ In 'ny_noaa' data, there are `r nrow(ny_noaa)` observations, which is a really h
 ```{r}
 box_plot = part_ny_noaa %>%
   mutate(month = factor(month.name[month], levels = month.name)) %>%
-  plot_ly(x = ~month, y = ~tmax, color = ~month, type = "box") %>%
-  layout(title = "Boxplot of Maximun Temperature Distribution in each month", 
+  plot_ly(x = ~month, y = ~tmin, color = ~month, type = "box") %>%
+  layout(title = "Boxplot of Minimum Temperature Distribution in each month", 
          legend = list(title = list(text = "<month>"))) #add title and lengend title in the graph
 
 box_plot
@@ -57,9 +58,34 @@ box_plot
 ```
 
 
-## Plotly scatter plot
+## Plotly scatter-line plot
+
+```{r}
+scatterline_plot = part_ny_noaa %>%
+  mutate(month = factor(month.name[month], levels = month.name)) %>%
+  group_by(month) %>%
+  summarise(mean_tmax = mean(tmax, na.rm = T)) %>% 
+  plot_ly(x = ~ month, y = ~mean_tmax, type = "scatter", mode = "line") %>%
+  layout(title = "Mean Maximun Temperature in each month during 2005-2010", 
+         yaxis = list(title = "mean of maximum temperature")) #add title in the graph
+
+scatterline_plot
+
+```
 
 
+## Plotly bar plot
+
+```{r}
+part_ny_noaa %>%
+  mutate(month = factor(month.name[month], levels = month.name)) %>%
+  group_by(month) %>%
+  summarise(mean_prcp = mean(prcp, na.rm = T)) %>% 
+  plot_ly(x = ~ month, y = ~mean_prcp, type = "bar") %>%
+  layout(title = "Mean Precipitation (tenths of mm) in each month during 2005-2010", 
+         yaxis = list(title = "Mean of Precipitation")) #add title in the graph
+
+```
 
 
 
