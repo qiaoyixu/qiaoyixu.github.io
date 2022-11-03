@@ -13,6 +13,8 @@ navbar:
       href: mailto:<qx2222@columbia.edu>
     - icon: fa-github fa-lg
       href: https://github.com/qiaoyixu
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/qiaoyi-xu-99b8091b9/
 output:
   html_document:
     theme: flatly
